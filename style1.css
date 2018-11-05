@@ -1,0 +1,76 @@
+body {
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.text {
+    display: table-cell;
+    font-family: Arial;
+    padding: 0.1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+#blueBox {
+    display: table;
+    background: #3333FF;
+    color: white;
+    font-size: 30px;
+}
+
+#yellowBox {
+    display: table;
+    background: yellow;
+    border: 2px solid black;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#greenBox {
+    display: table;
+    background: #559922;
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+}
+
+#grayBox {
+    display: table;
+    background: lightgray;
+    border: 2px solid red;
+    color: red;
+    font-size: 30px;
+}
+
+#photo2 {
+    -webkit-animation: rotation 1s infinite linear;
+}
+
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+#dropArea1 {
+    border: 1px solid #00AA00;
+}
+
+#dropArea2 {
+    border: 1px solid black;
+}
