@@ -1,14 +1,18 @@
 body {
+    /* We want to be able to scroll if the elements doesn't fit the screen*/
     overflow-y: scroll;
     overflow-x: scroll;
 }
 
 .text {
+    /* Common properties for all texts. They have to be 'table-cells' in order for vertical positioning to
+     work. */
     display: table-cell;
     font-family: Arial;
     padding: 0.1em;
 }
 
+/* Definitions for placing text horizontally and vertically inside a parent */
 .center {
     text-align: center;
 }
@@ -21,6 +25,8 @@ body {
     vertical-align: bottom;
 }
 
+/* Style definitions for the different colored boxes. They must be defined as 'table' for vertical positioning to work
+in the classes defined as 'table-cells'. */
 #blueBox {
     display: table;
     background: #3333FF;
@@ -57,7 +63,15 @@ body {
     -webkit-animation: rotation 1s infinite linear;
 }
 
+#dropArea1 {
+    border: 1px solid #00AA00;
+}
 
+#dropArea2 {
+    border: 1px solid black;
+}
+
+/* Define a simple rotating animation that is used for the vortex in #photo2 */
 @-webkit-keyframes rotation {
     from {
         -webkit-transform: rotate(0deg);
@@ -65,12 +79,4 @@ body {
     to {
         -webkit-transform: rotate(359deg);
     }
-}
-
-#dropArea1 {
-    border: 1px solid #00AA00;
-}
-
-#dropArea2 {
-    border: 1px solid black;
 }
