@@ -8,58 +8,50 @@
 
 <body>
 
-<!--- The page is made up of several boxes, each created through a unique 'div id'. The size and location
-of the boxes are calculated with JavaScript and the colors, borders and some font properties are defined with CSS.
-Since the boxes' locations are calculated in a separate place, the boxes don't need to be laid out in a specific order
-in the html. It is good to have them in a logical order for human readability, though. -->
+<!--- The page is made up of several boxes created through a common div class (the base box) and unique div id (with
+attributes for the specific boxes) in the CSS-file. -->
 
 <!-- The first row of boxes. -->
-<div id="blueBox">
-    <!-- Text placing and common font properties are defined with div classes -->
+<div class="box" id="blueBox">
     <div class="text center">
         Text A
     </div>
 </div>
-
-<div id="yellowBox">
+<div class="box" id="yellowBox">
     <div class="text middle">
         Text B
     </div>
 </div>
-
-<div id="greenBox">
+<div class="box" id="greenBox">
     <div class="text bottom center">
         Text C
     </div>
 </div>
-
-<div id="photo2">
-    <!--- The photo size 100% means it is scaled to fit the box even though the image itself is larger. -->
-    <img src="spiral.jpg" height="100%" width="100%" draggable="false">
+<div class="box" id="photo2">
+        <img src="spiral.jpg" height="100%" draggable="false">
 </div>
 
-<!-- The second row of boxes -->
-<div id="dragPhoto">
+<!-- The following elements are laid out on the second row instead of the first by putting "clear: left" in the style
+ for the dragPhoto-element. I have put the attribute in the div-tag to make the positioning of the elements easier
+ to see straight from the html-file. -->
+<div class="box" id="dragPhoto" style="clear: left">
     <img src="pumpkin.jpg" id="pumpkin" height="100%" width="100%" draggable="true" ondragstart="drag(event)">
 </div>
-
-<div id="grayBox">
+<div class="box" id="grayBox">
     <div class="text">
         Text D
     </div>
 </div>
 
-
 <!-- The third row of boxes. These are the boxes that the image from above can be dropped onto. The ondrop- and
-ondragover-properties trig functions that create the behaviour we need for drag-and-drop to work. -->
-<div id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+ondragover-properties trig functions that create the behaviour we need for drag-and-drop to work.
+
+Again, a new row is started by putting "clear: left" in the style for dropArea1. -->
+<div class="box" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)" style="clear: left"></div>
+<div class="box" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 </body>
 </html>
-
-
-
 
 <script>
     // The default browser behaviour is to not let the user drop the dragged content anywhere. This must be disabled
@@ -78,81 +70,4 @@ ondragover-properties trig functions that create the behaviour we need for drag-
         data = ev.dataTransfer.getData("image/jpeg");
         ev.target.appendChild(document.getElementById(data));
     }
-
-
-    // Function to assign an actual box to the currently selected element.
-    function setElement(x, y, w, h){
-        element.style.position = "absolute";
-        element.style.left = x + "px";
-        element.style.top = y + "px";
-        element.style.width = w + "px";
-        element.style.height = h + "px";
-    }
-
-    {   // The following code is put in a block so that we can declare block variables with 'let' and not having
-        // to worry about other functions messing with them (or the other way around).
-        let boxH = 150;
-        let boxW = boxH;
-        let longBoxW = boxW * 3;
-
-        let padding = 75;
-
-        let row1y = padding;
-        let row2y = row1y + boxH + (padding * 1.5);
-        let row3y = row2y + boxH + (padding / 2);
-
-
-        // Row 1
-        let y = row1y;
-
-        // Blue box
-        let x = padding;
-        element = document.getElementById("blueBox"); // Select a div id
-        setElement(x, y, boxW, boxH);   // Create a box for said div id at the coordinates x,y
-
-        // Yellow box
-        x = x + boxW + 250;
-        element = document.getElementById("yellowBox");
-        setElement(x, y, boxW, boxH);
-
-        // Green box
-        x = x + boxW + 150;
-        element = document.getElementById("greenBox")
-        setElement(x, y, boxW, boxH);
-
-        // Photo 2 -box
-        x = x + (3 * boxW);
-        element = document.getElementById("photo2");
-        setElement(x, y, boxW, boxH);
-
-
-        // Row 2
-        y = row2y;
-
-        // Photo to drag -box
-        x = padding;
-        element = document.getElementById("dragPhoto");
-        setElement(x, y, boxW, boxH);
-
-        // Gray box
-        x = x + boxW + 200;
-        element = document.getElementById("grayBox")
-        setElement(x, y, longBoxW, boxH);
-
-
-        // Row 3
-        y = row3y;
-
-        // Left drag-and-drop area
-        x = padding + (boxW / 2);
-        element = document.getElementById("dropArea1");
-        setElement(x, y, boxW, boxH);
-        
-        // Right drag-and-drop area
-        x = x + (2 * boxW) + longBoxW;
-        element = document.getElementById("dropArea2");
-        setElement(x, y, boxW, boxH);
-    }
-
 </script>
-

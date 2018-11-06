@@ -1,73 +1,59 @@
-body {
-    /* We want to be able to scroll if the elements doesn't fit the screen*/
-    overflow-y: scroll;
-    overflow-x: scroll;
+* {
+    box-sizing: border-box;
 }
 
-.text {
-    /* Common properties for all texts. They have to be 'table-cells' in order for vertical positioning to
-     work. */
-    display: table-cell;
-    font-family: Arial;
-    padding: 0.1em;
-}
-
-/* Definitions for placing text horizontally and vertically inside a parent */
-.center {
-    text-align: center;
-}
-
-.middle {
-    vertical-align: middle;
-}
-
-.bottom {
-    vertical-align: bottom;
-}
-
-/* Style definitions for the different colored boxes. They must be defined as 'table' for vertical positioning to work
-in the classes defined as 'table-cells'. */
-#blueBox {
+/* The common class for all boxes. This defines a basic set of attributes, which can be overridden for the individual
+elements.*/
+.box {
     display: table;
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin: 75px;
+}
+
+/* Attributes for the specific boxes */
+#blueBox {
     background: #3333FF;
     color: white;
     font-size: 30px;
 }
-
 #yellowBox {
-    display: table;
     background: yellow;
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
     font-size: 40px;
     font-weight: bold;
+    margin-left: 250px;
 }
-
 #greenBox {
-    display: table;
     background: #559922;
-    border: 2px solid black;
+    border: 1px solid black;
     color: white;
     font-size: 20px;
+    margin-left: 150px;
 }
-
+#photo2 {
+    -webkit-animation: rotation 1s infinite linear;
+    margin-left: 300px;
+}
 #grayBox {
-    display: table;
+    width: 350px;
     background: lightgray;
     border: 2px solid red;
     color: red;
     font-size: 30px;
 }
-
-#photo2 {
-    -webkit-animation: rotation 1s infinite linear;
+#dragPhoto {
 }
-
 #dropArea1 {
+    margin-left: 150px;
     border: 1px solid #00AA00;
 }
 
 #dropArea2 {
+    width: 200px;
+    margin-left: 350px;
     border: 1px solid black;
 }
 
@@ -79,4 +65,22 @@ in the classes defined as 'table-cells'. */
     to {
         -webkit-transform: rotate(359deg);
     }
+}
+
+/* Common properties for all texts. Texts have to be 'table-cells' (and their parent elements 'tables') in order for
+vertical positioning to work. */
+.text {
+    display: table-cell;
+    font-family: Arial;
+    padding: 0.1em;
+}
+/* Definitions for placing text horizontally and vertically inside a parent */
+.center {
+    text-align: center;
+}
+.middle {
+    vertical-align: middle;
+}
+.bottom {
+    vertical-align: bottom;
 }
