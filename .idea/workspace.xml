@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f87ce0bb-f740-47e5-91bc-05ef72e35a18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panorama.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panorama2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pumpkin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pumpkin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/style1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panorama.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/panorama.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panorama2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/style2.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +30,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="html" value="5" />
+          <entry key="html" value="6" />
           <entry key="jpg" value="1" />
           <entry key="ts" value="1" />
         </counts>
@@ -41,21 +38,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="HTML" value="5" />
+          <entry key="HTML" value="6" />
           <entry key="Image" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="8449" />
-          <entry key="html" value="11945" />
+          <entry key="css" value="11169" />
+          <entry key="html" value="12973" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="8449" />
-          <entry key="HTML" value="11945" />
+          <entry key="CSS" value="11169" />
+          <entry key="HTML" value="12973" />
         </counts>
       </usages-collector>
     </session>
@@ -65,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="228">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="432">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -92,16 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yellow</find>
-      <find>photo</find>
-      <find>photo2</find>
-      <find>row</find>
-      <find>row 2</find>
-      <find>green</find>
-      <find>c.</find>
-      <find>longbo</find>
-      <find>text b</find>
-      <find>text d</find>
       <find>Area1</find>
       <find>dragga</find>
       <find>fixed</find>
@@ -122,6 +109,16 @@
       <find>col-2</find>
       <find>col-10</find>
       <find>col-</find>
+      <find>section</find>
+      <find>everythin</find>
+      <find>everything</find>
+      <find>everything</find>
+      <find>topmen</find>
+      <find>topMen</find>
+      <find>universe</find>
+      <find>first</find>
+      <find>div, p</find>
+      <find>margin-to</find>
     </findStrings>
     <replaceStrings>
       <replace>boxWH</replace>
@@ -140,6 +137,9 @@
       <replace>main-left</replace>
       <replace>main-right</replace>
       <replace>main-</replace>
+      <replace>everything</replace>
+      <replace>universe</replace>
+      <replace>div, p, nav</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -168,7 +168,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -244,12 +244,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541283079590</updated>
       <workItem from="1541283081716" duration="98000" />
-      <workItem from="1541283902684" duration="98830000" />
+      <workItem from="1541283902684" duration="108250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98928000" />
+    <option name="totallyTimeSpent" value="108348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -307,13 +307,6 @@
     <entry file="file://$PROJECT_DIR$/pumpkin.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="4" column="46" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -321,17 +314,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" column="46" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="228">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="432">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>

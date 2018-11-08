@@ -1,25 +1,32 @@
+/* First of all we set the sizes of all and any elements to be defined as their actual outer dimensions. */
 * {
     box-sizing: border-box;
 }
 
+/* Create columns for the side menu and the main content. */
 .main-left {width: 16.66%;}
 .main-right {width: 83.33%;}
 
-section {
+/* The universe contains everything that is visible on the page. The default margin values for a viewport width of
+1023 pixels or less are defined here. */
+.universe {
     position: absolute;
     top: 2vh;
-    left: 5%;
-    transform: translate(-3%, 0)
+    left: 5vw;
+    transform: translate(-3vw, 0)
 }
 
-p {
-    margin-top: 0;
+/* Images are by default 100% the width of their parent element (usually div.content) */
+img {
+    width: 100%;
 }
 
+/* The properties for unordered lists and their items. The side menu is implemented as an unordered list. */
 ul {
     list-style-type: none;
     margin-top: 1em;
-    margin-left: 0.5em;
+    margin-left: 1em;
+    margin-bottom: 0.25em;
     padding: 0;
 }
 
@@ -27,16 +34,17 @@ li {
     padding-bottom: 0.75em;
 }
 
+/* Links that are menu items shall by default look like normal text. */
+.sideMenu > ul > li > a, .topMenu > a {
+    color:black;
+    text-decoration: none;
+}
+
+/* The two columns with the side menu and the content shall float to the left. The padding is zero to align the
+content with the top menu. */
 [class*="main-"] {
     float: left;
     padding: 0;
-    border: 0;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .topMenu {
@@ -51,37 +59,24 @@ li {
 
 .content {
     padding-left: 30px;
-    text-align: justify;
+    text-align: justify; /* Justified text looks nicer than non-justified */
 }
 
-@media screen and (min-width: 768px) {
-    div, p {
-        padding-right: 2vw;
-    }
-
-}
-
-@media screen and (min-width: 1024px) {
-    section {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0)
-    }
-
-    div, p {
-        padding-right: 3vw;
-    }
-
-    .topMenu {
-        width: 981px;
-    }
-}
-
+/* Some attributes change when the viewport is is 768px or less, 768px - 1023px and 1024px and over.
+    When the viewport is narrow, the side menu is placed on top of the content to make more room for the text on a
+    small screen. When the viewport is wide, the content is limited to a width of ~1000 px to make it easier to
+    read and interact with. */
 @media screen and (max-width: 768px) {
-    div, p{
+    div, p, nav {
         padding-right: 0vw;
     }
 
+    ul {
+        margin-left: 0em;
+    }
+
+    /* The top menu and content divs are set to fill the section in width, thus forcing them to be positioned
+    vertically instead of horizontally. */
     [class*="main-"] {
         width: 100%;
     }
@@ -90,14 +85,41 @@ li {
         padding: 0px;
     }
 
+    /* The side menu is placed in the middle of the screen horizontally and the items are centered in the
+    bounding box. */
     .sideMenu {
         position: relative;
         left: 25%;
         width: 50%;
         text-align: center;
     }
+}
 
-    .firstRow {
-        margin-top: 3vh;
+@media screen and (min-width: 768px) {
+    /* Put no top margin on paragraphs, so that the main content and the side menu are on the same height. */
+    p {
+        margin-top: 0;
+    }
+
+    div, p, nav {
+        padding-right: 2vw;
+    }
+
+}
+
+/* Min-width 1024 inherits everything from min-width 768 that is not explicitly overridden (singe >1024 fulfills the
+ criterion >768 as well.) */
+@media screen and (min-width: 1024px) {
+    /* The entire content is set to a max width of 981px (which is the width the context has at 1023 px when margins
+    are taken into account. Whern the viewport gets wider, the content is centered in the window. */
+    .universe {
+        position: absolute;
+        width: 982px;
+        left: 50%;
+        transform: translate(-50%, 0)
+    }
+
+    div, p, nav {
+        padding-right: 3vw;
     }
 }

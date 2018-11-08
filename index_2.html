@@ -8,48 +8,57 @@
 </head>
 
 <body>
-<section>
-<div class="topMenu">
-    <a href="">File</a> |
-    <a href="">Edit</a> |
-    <a href="">View</a> |
-    <a href="">Help</a>
-</div>
 
-<div class="sideMenu main-left">
-    <ul>
-        <li>Item A</li>
-        <li>Item B</li>
-        <li>Item C</li>
-    </ul>
-</div>
+<!-- First of all, create a section that holds all contents of the entire page. This section will grow until it is
+ 1024 pixels wide, after which it will stay the same width and centered in the viewport.-->
+<section class="universe">
 
-<div class="content main-right">
-    <p class="firstRow">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-    </p>
-    <p>
-        <img src="panorama2.jpeg" draggable="false" width="100%">
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-    </p>
-</div>
+    <!-- Create the menu on top of the page -->
+    <nav class="topMenu">
+        <a href="" class="menuItem">File</a> |
+        <a href="" class="menuItem">Edit</a> |
+        <a href="" class="menuItem">View</a> |
+        <a href="" class="menuItem">Help</a>
+    </nav>
+
+    <!--- Create the navigation menu in the sidebar. This menu will be placed on top of the content when the viewport
+     is less than 768 pixels wide. -->
+    <nav class="sideMenu main-left">
+        <ul>
+            <li><a href="" class="menuItem">Item A</a></li>
+            <li><a href="" class="menuItem">Item B</a></li>
+            <li><a href="" class="menuItem">Item C</a></li>
+            <li><a href="" >Item D</a></li>
+        </ul>
+    </nav>
+
+    <!-- The main content of the page goes inside this div -->
+    <div class="content main-right">
+        <p class="firstRow">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+        <p>
+            <img src="panorama.jpeg" draggable="false">
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+        </p>
+    </div>
 </section>
 
 </body>
