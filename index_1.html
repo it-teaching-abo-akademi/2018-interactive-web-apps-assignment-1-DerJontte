@@ -12,43 +12,48 @@
 attributes for the specific boxes) in the CSS-file. -->
 
 <!-- The first row of boxes. -->
-<div class="box" id="blueBox">
-    <div class="text center">
-        Text A
+<div class="firstRow">
+    <div class="box" id="blueBox">
+        <div class="text center">
+            Text A
+        </div>
     </div>
-</div>
-<div class="box" id="yellowBox">
-    <div class="text middle">
-        Text B
+    <div class="box" id="yellowBox">
+        <div class="text middle">
+            Text B
+        </div>
     </div>
-</div>
-<div class="box" id="greenBox">
-    <div class="text bottom center">
-        Text C
+    <div class="box" id="greenBox">
+        <div class="text bottom center">
+            Text C
+        </div>
     </div>
-</div>
-<div class="box" id="photo2">
-        <img src="spiral.jpg" height="100%" draggable="false">
+    <div class="box" id="photo2">
+        <img src="spiral.jpg" draggable="false">
+    </div>
 </div>
 
 <!-- The following elements are laid out on the second row instead of the first by putting "clear: left" in the style
  for the dragPhoto-element. I have put the attribute in the div-tag to make the positioning of the elements easier
  to see straight from the html-file. -->
-<div class="box" id="dragPhoto" style="clear: left">
-    <img src="pumpkin.jpg" id="pumpkin" height="100%" width="100%" draggable="true" ondragstart="drag(event)">
-</div>
-<div class="box" id="grayBox">
-    <div class="text">
-        Text D
+<div class="secondRow">
+    <div class="box" id="dragPhoto">
+        <img src="pumpkin.jpg" id="pumpkin" draggable="true" ondragstart="drag(event)">
+    </div>
+    <div class="box" id="grayBox">
+        <div class="text">
+            Text D
+        </div>
     </div>
 </div>
-
 <!-- The third row of boxes. These are the boxes that the image from above can be dropped onto. The ondrop- and
 ondragover-properties trig functions that create the behaviour we need for drag-and-drop to work.
 
 Again, a new row is started by putting "clear: left" in the style for dropArea1. -->
-<div class="box" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)" style="clear: left"></div>
-<div class="box" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="thirdRow">
+    <div class="box" id="dropArea1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="box" id="dropArea2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
 
 </body>
 </html>

@@ -1,18 +1,44 @@
+body {
+}
+
 * {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 148px;
+    float: left;
+}
 /* The common class for all boxes. This defines a basic set of attributes, which can be overridden for the individual
 elements.*/
+.firstRow{
+    position: absolute;
+    display: flex;
+    top: 75px;
+}
+
+.secondRow{
+    position: absolute;
+    display: flex;
+    top: 300px;
+}
+
+.thirdRow{
+    position: absolute;
+    display: flex;
+    top: 525px;
+    left: 150px;
+}
+
 .box {
     display: table;
     float: left;
     height: 150px;
     width: 150px;
-    margin: 75px;
+    margin-left: 75px;
 }
 
-/* Attributes for the specific boxes */
+/* Attributes for specific boxes */
 #blueBox {
     background: #3333FF;
     color: white;
@@ -43,11 +69,11 @@ elements.*/
     border: 2px solid red;
     color: red;
     font-size: 30px;
+    margin-left: 150px;
 }
 #dragPhoto {
 }
 #dropArea1 {
-    margin-left: 150px;
     border: 1px solid #00AA00;
 }
 
