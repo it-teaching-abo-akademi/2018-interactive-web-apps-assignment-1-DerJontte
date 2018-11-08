@@ -110,13 +110,14 @@ content with the top menu. */
 /* Min-width 1024 inherits everything from min-width 768 that is not explicitly overridden (singe >1024 fulfills the
  criterion >768 as well.) */
 @media screen and (min-width: 1024px) {
-    /* The entire content is set to a max width of 981px (which is the width the context has at 1023 px when margins
-    are taken into account. Whern the viewport gets wider, the content is centered in the window. */
+    /* The entire content is set to a max width of 981px (which is the width the content has at 1023 px when margins
+    are taken into account). When the viewport gets wider the content is centered in the window, or actually put at
+    40/60 from the left, so that the text is in the middle of the window. */
     .universe {
         position: absolute;
         width: 982px;
-        left: 50%;
-        transform: translate(-50%, 0)
+        left: 40%;
+        transform: translate(-40%, 0)
     }
 
     div, p, nav {
