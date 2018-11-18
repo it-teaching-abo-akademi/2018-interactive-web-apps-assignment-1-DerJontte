@@ -1,3 +1,6 @@
+body {
+    margin-left: 1.5vw;
+}
 /* First of all we set the sizes of all and any elements to be defined as their actual outer dimensions. */
 * {
     box-sizing: border-box;
@@ -7,16 +10,21 @@
 .main-left {width: 16.66%;}
 .main-right {width: 83.33%;}
 
+/* The two columns with the side menu and the content shall float to the left. The padding is zero to align the
+content with the top menu. */
+[class*="main-"] {
+    float: left;
+    padding: 0;
+}
+
 /* The universe contains everything that is visible on the page. The default margin values for a viewport width of
 1023 pixels or less are defined here. */
 .universe {
     position: absolute;
-    top: 2vh;
-    left: 5vw;
-    transform: translate(-3vw, 0)
+    width: 97%;
 }
 
-/* Images are by default 100% the width of their parent element (usually div.content) */
+/* Images are by default 100% the width of their parent element (in this project usually div.content) */
 img {
     width: 100%;
 }
@@ -40,13 +48,6 @@ li {
     text-decoration: none;
 }
 
-/* The two columns with the side menu and the content shall float to the left. The padding is zero to align the
-content with the top menu. */
-[class*="main-"] {
-    float: left;
-    padding: 0;
-}
-
 .topMenu {
     text-align: right;
     width: 100%;
@@ -67,14 +68,6 @@ content with the top menu. */
     small screen. When the viewport is wide, the content is limited to a width of ~1000 px to make it easier to
     read and interact with. */
 @media screen and (max-width: 768px) {
-    div, p, nav {
-        padding-right: 0vw;
-    }
-
-    ul {
-        margin-left: 0em;
-    }
-
     /* The top menu and content divs are set to fill the section in width, thus forcing them to be positioned
     vertically instead of horizontally. */
     [class*="main-"] {
@@ -93,6 +86,11 @@ content with the top menu. */
         width: 50%;
         text-align: center;
     }
+
+    ul {
+        margin-left: 0em;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -101,13 +99,9 @@ content with the top menu. */
         margin-top: 0;
     }
 
-    div, p, nav {
-        padding-right: 2vw;
-    }
-
 }
 
-/* Min-width 1024 inherits everything from min-width 768 that is not explicitly overridden (singe >1024 fulfills the
+/* Min-width 1024 inherits everything from min-width 768 that is not explicitly overridden (since >1024 fulfills the
  criterion >768 as well.) */
 @media screen and (min-width: 1024px) {
     /* The entire content is set to a max width of 981px (which is the width the content has at 1023 px when margins
@@ -115,12 +109,8 @@ content with the top menu. */
     40/60 from the left, so that the text is in the middle of the window. */
     .universe {
         position: absolute;
-        width: 982px;
-        left: 40%;
-        transform: translate(-40%, 0)
-    }
-
-    div, p, nav {
-        padding-right: 3vw;
+        width: 993px;
+        left: 50%;
+        transform: translate(-50%, 0)
     }
 }
